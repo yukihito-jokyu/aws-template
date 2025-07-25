@@ -1,0 +1,8 @@
+CREATE DATABASE IF NOT EXISTS user_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+USE user_db;
+
+CREATE TABLE IF NOT EXISTS users (
+    uuid CHAR(36) PRIMARY KEY DEFAULT (UUID()),
+    username VARCHAR(50) NOT NULL UNIQUE
+);
